@@ -54,7 +54,7 @@ router.post('/name/:monsterName', async (req,res)=> {
     try {
         const namedMonster = await Monster.find({
             // regex keyword makes this work, by returning the closest results
-            $name: req.params.monsterName
+            name: { "$regex": req.params.monsterName, "$options": "i" }
         }).exec()
         console.log((namedMonster))
         res.status(200).json(namedMonster)
