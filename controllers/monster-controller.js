@@ -10,7 +10,7 @@ const db = require('../models') // db.Monster
 console.log(Monster)
 
 // Routes
-// http://localhost:4000/Monster/
+// http://localhost:4000/monster/
 router.get('/', async (req,res)=> {
     // res.status(200).json({message: "Monster index/get route"})
     try {
@@ -21,7 +21,7 @@ router.get('/', async (req,res)=> {
     }
 })
 
-// http://localhost:4000/Monster/
+// http://localhost:4000/monster/
 router.post('/', async (req,res)=> {
     // console.log('post route', req.body)
     // res.status(201).json({message: "Monster create/post route"})
@@ -36,7 +36,7 @@ router.post('/', async (req,res)=> {
     }
 })
 
-// http://localhost:4000/Monster/:id - GET
+// http://localhost:4000/monster/:id - GET
 router.get('/:id', async (req,res)=> {
     // res.status(200).json({message: "Monster show/get route /Monster/"+req.params.id})
     try {
@@ -48,7 +48,7 @@ router.get('/:id', async (req,res)=> {
         res.status(400).json({error: err})
     }
 })
-// http://localhost:4000/Monster/name - GET
+// http://localhost:4000/monster/:monsterName - GET
 router.post('/name/:monsterName', async (req,res)=> {
     // res.status(200).json({message: "Monster index/get route"})
     try {
@@ -62,7 +62,7 @@ router.post('/name/:monsterName', async (req,res)=> {
         res.status(400).json({error: err})
     }
 })
-// http://localhost:4000/Monster/:id - DELETE
+// http://localhost:4000/monster/:id - DELETE
 router.delete('/:id', async (req,res)=> {
     // res.status(200).json({message: "Monster destroy/delete route /Monster/"+req.params.id})
     try {
@@ -75,7 +75,7 @@ router.delete('/:id', async (req,res)=> {
     }
 })
 
-// http://localhost:4000/Monster/:id - PUT
+// http://localhost:4000/monster/:id - PUT
 router.put('/:id', async (req,res)=> {
     // res.status(200).json({message: "Monster update/put route /Monster/"+req.params.id})
     try {

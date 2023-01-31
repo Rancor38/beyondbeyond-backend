@@ -1,3 +1,4 @@
 module.exports = {
-    Monster: require('./Monster')
+    Monster: require('./Monster'),
+    User: require('./User')
 }
